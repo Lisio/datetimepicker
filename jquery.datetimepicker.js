@@ -523,7 +523,7 @@
 					"კვ", "ორშ", "სამშ", "ოთხ", "ხუთ", "პარ", "შაბ"
 				],
 				dayOfWeek: ["კვირა", "ორშაბათი", "სამშაბათი", "ოთხშაბათი", "ხუთშაბათი", "პარასკევი", "შაბათი"]
-			},
+			}
 		},
 		value: '',
 		rtl: false,
@@ -630,7 +630,7 @@
 				days: locale.dayOfWeek,
 				daysShort: locale.dayOfWeekShort,
 				months: locale.months,
-				monthsShort: $.map(locale.months, function(n){ return n.substring(0, 3) }),
+				monthsShort: $.map(locale.months, function(n){ return n.substring(0, 3) })
 			};
 
 	 	dateHelper = new DateFormatter({

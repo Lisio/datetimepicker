@@ -19,8 +19,9 @@ var DateFormatter;
     _compare = function (str1, str2) {
         return typeof(str1) === 'string' && typeof(str2) === 'string' && str1.toLowerCase() === str2.toLowerCase();
     };
-    _lpad = function (value, length, char) {
-        var chr = char || '0', val = value.toString();
+    _lpad = function (value, length, chr) {
+        var val = value.toString();
+        chr = chr || '0';
         return val.length < length ? _lpad(chr + val, length) : val;
     };
     _extend = function (out) {
@@ -1099,7 +1100,7 @@ var DateFormatter;
 					"კვ", "ორშ", "სამშ", "ოთხ", "ხუთ", "პარ", "შაბ"
 				],
 				dayOfWeek: ["კვირა", "ორშაბათი", "სამშაბათი", "ოთხშაბათი", "ხუთშაბათი", "პარასკევი", "შაბათი"]
-			},
+			}
 		},
 		value: '',
 		rtl: false,
@@ -1206,7 +1207,7 @@ var DateFormatter;
 				days: locale.dayOfWeek,
 				daysShort: locale.dayOfWeekShort,
 				months: locale.months,
-				monthsShort: $.map(locale.months, function(n){ return n.substring(0, 3) }),
+				monthsShort: $.map(locale.months, function(n){ return n.substring(0, 3) })
 			};
 
 	 	dateHelper = new DateFormatter({
